@@ -1,14 +1,10 @@
-package com.thread.lifecycle;
-
-public class ThreadLifeCycle extends Thread {
-
+class ThreadCycle extends Thread {
 	String name;
-
-	public ThreadLifeCycle() {
+	public ThreadCycle() {
 		System.out.println("NEW");
 	}
 
-	public ThreadLifeCycle(String name) {
+	public ThreadCycle(String name) {
 		System.out.println(name + " : NEW");
 		this.name = name;
 	}
@@ -37,7 +33,16 @@ public class ThreadLifeCycle extends Thread {
 		else
 			t = new Thread(this);
 		System.out.println("START");
-
 		t.start();
 	}
 }
+public class ThreadLifeCycle
+{
+    public static void main(String[] args)
+    {
+ 		// Thread Life Cycle Example
+ 		ThreadCycle lifeCycle = new ThreadCycle("Hello");
+ 		lifeCycle.start();	   
+    }
+}
+

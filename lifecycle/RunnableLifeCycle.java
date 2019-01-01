@@ -1,8 +1,7 @@
-package com.thread.lifecycle;
 
-public class RunnableLifeCycle implements Runnable {
+class RunnableCycle implements Runnable {
 
-	public RunnableLifeCycle() {
+	public RunnableCycle() {
 		System.out.println("NEW");
 	}
 
@@ -26,3 +25,14 @@ public class RunnableLifeCycle implements Runnable {
 		System.out.println("DEAD");
 	}
 }
+
+public class RunnableLifeCycle
+{
+    public static void main(String[] args)
+    {
+		// Runnable Life cycle Example
+		RunnableCycle  runEx = new RunnableCycle();
+		runEx.start();
+    }
+}
+
